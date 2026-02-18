@@ -10,7 +10,11 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+- Samme miljø på alle maskiner
+- Enkelt å dele/reprodusere miljøer
+- Isolering
+- Lett å starte/stoppe/slette
+- Containeren inneholder alt som trengs for å kjøre applikasjonen
 
 ---
 
@@ -18,7 +22,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det oppretter et volum på disk som kan brukes til å lagre data, så du ikke mister dataen når containeren stoppes.
 
 ---
 
@@ -26,7 +30,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Containeren stopper og du vil miste alle data som ikke er lagret i et persistent volum.
 
 ---
 
@@ -34,7 +38,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Første gang oppretter den miljøet og laster ned avhengigheter. Senere starter den containeren som alle rede er opprettet.
 
 ---
 
@@ -42,7 +46,9 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det kommer an på om innholdet er hemmelig eller ikke. Om det ikke er hemmelig ville jeg bare delt det via et privat Github-repository eller lignende, og gitt vedkommende tilgang. 
+
+Om det noe som er hemmelig ville jeg vurdert å benytte en ende-til-ende kryperingstjeneste, og i tillegg la være å lagre miljøvariabler i yaml-filen.  
 
 ---
 
@@ -52,7 +58,10 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+- INNER JOIN returnerer kun de elementene som er i begge tabellene
+- LEFT JOIN returnerer alle elementene som er i begge tabellene og alle elementene som er i den "første" tabellen.
+- RIGHT JOIN returnerer alle elementene som er i begge tabellene og alle elementene som er i den "siste" tabellen.
+- FULL JOIN Returnerer alle elementene fra begge tabellene.
 
 ---
 
@@ -60,7 +69,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Vi bruker fremmednøkler for å lage relasjoner mellom tabeller og koble dem sammen. Hvis du prøver å slette et program som har studenter vil du få en feilmelding, fordi databasen beskytter dataintegriteten til studenttabellen og forhindrer at de peker på et program som ikke finnes.
 
 ---
 
@@ -68,7 +77,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+GROUP BY sorterer data etter hva man definerer etter GROUP BY, f. eks for å telle antall emner en student tar og skrive det ut på én linje. Når man bruker aggregatfunksjoner vet ikke databasen automatisk hvordan den skal kombinere radene, derfor må vi definere det med en GROUP BY.
 
 ---
 
@@ -76,7 +85,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+En indeks fungerer som en stikkordliste for å finne data raskere. De fleste databaser bruker B-tree (Balnced tree) som er en effektiv datastruktur. 
 
 ---
 
@@ -84,7 +93,13 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+1. Bruke EXPLAIN ANALYZE til å finne flaskehalser
+2. Sjekke om kolonnene som brukes i JOIN er indeksert
+3. Unngå bruk av SELECT *
+4. Optimaliser JOIN rekkefølge og logikk
+   - Filtrer tidlig, prøv å begrense antall rader før man bruker JOIN
+   - Unngå funksjoner i WHERE
+5. Oppdater tabellstatistikken i DBMS, ANALYZE tabellnavn
 
 ---
 

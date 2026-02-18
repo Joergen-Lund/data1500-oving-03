@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: data1500-postgres
+    container_name: data1500-postgres-oving3
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin123
